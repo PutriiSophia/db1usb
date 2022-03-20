@@ -1,49 +1,132 @@
-#Tipe data pada Phyton
+#LIST
+#Diimplementasikan dengan kurung siku [ ]
+#Contoh List
+nama = ["sofia","sarah","sifa","zalfa","nur"]
 
-#Boolean
-print(1<3) #pembuktian false atau true
-print(2>5)
+#Menampilkan List dengan Perulangan
+for i in nama :                    #perulangan for
+	print(i)
+i = 0                                    #membuat variabel baru
+while i < len(nama):         #perulangan while
+	print(nama[i])
+	i += 1
+	
+#Mengupdate salah satu value
+nama [2] = "dita"
+print(nama)
 
-#String
-print("I am string")
-print('ayo belajar Phyton')
+#Menghapus salah satu value
+nama.pop()          #mengapus indeks terakhir
+print(nama)
+del nama [1 : 3]    #menghapus indeks tertentu
+print(nama)
+nama.remove("zalfa")   #menghapus bkn indeks
+print(nama)
 
-#Integer
-a = 7 #menggunakan variabel
-print(a)
-
-#Float
-0.4 = .4 #contoh penulisan koma pada float
-4.0 = 4.
-a = 4.1 #menggunakan variabel
-print(a)
+#Menambahkan value
+nama.append ("sarah")
+print(nama)
+nama.extend (["sifah","aisya"]) 
+print(nama)
+nama.insert (2, "nur") #menambah nur di indeks 2
+print(nama)
 
 
-#Operator Aritmatika
+#TUPLE
+#Diimplementasikan dengan kurung biasa( )
+#Contoh Tuple
+buah = ("anggur","apel","mangga","pir")
 
-#menggunakan 2 variabel
-nilai1 = 5
-nilai2 = 7
-print(nilai1 + nilai2)
+#Menampilkan Tuple dengan Perulangan
+for i in buah :                  #perulangan for
+	print(i)
+	
+buah = list(buah)           #konversi Tuple ke List
 
-#menggunakan inputan user
-nilai1 = int(input("masukkan nilai1 :"))
-nilai2 = int(input("masukkan nilai2 :"))
+i = 0                                 #membuat variabel baru
+while i < len(buah) :      #perulangan while
+	print (buah[i])
+	i += 1
+	
+#Mengupdate salah satu value
+buah [1] = "jeruk"
+print (buah)
 
-#operator
-penjumlahan = nilai1 + nilai2
-pengurangan = nilai1 - nilai2
-perkalian = nilai1 * nilai2
-pembagian = nilai1 / nilai2
-sisa_bagi = nilai1 % nilai2
-pangkat = nilai1 ** nilai2
-pembagian_bulat = nilai1 // nilai2
+#Menghapus salah satu value
+buah.pop()                         #hapus indeks terakhir
+print(buah)
+buah.remove("mangga") #hapus berdasarkan nilai
+print(buah)
+del buah [0]                  #hapus berdasarkan indeks
+print(buah)
 
-#output
-print(nilai1, '+', nilai2, '=', penjumlahan)
-print(nilai1, '-', nilai2, '=', pengurangan)
-print(nilai1, '*', nilai2, '=', perkalian)
-print(nilai1, '/', nilai2, '=', pembagian)
-print(nilai1, '%', nilai2, '=', sisa_bagi)
-print(nilai1, '**', nilai2, '=', pangkat)
-print(nilai1, '//', nilai2, '=', pembagian_bulat)
+#Menambahkan value
+buah.append ("semangka")
+print(buah)
+buah.extend (["melon","pisang"])
+print(buah)
+buah.insert (2, "cery") #tambah cery ke indeks 2
+print(buah)
+
+
+#SET
+#Diimplementasikan dengan kurung kurawal { }
+#Contoh Set
+nama = {"kuda","sofia",5,True,12}
+
+#Menampilkan Set dengan Perulangan
+for i in nama :               #perulangan for
+	print(i)
+
+nama = list(nama)       #konversi set ke list
+
+i = 0                                #membuat variabel baru
+while i < len(nama) :    #perulangan while
+	print(nama[i])
+	i += 1
+	
+#Mengupdate salah satu value
+nama [0] = "buku"
+print(nama)
+
+#Menghapus salah satu value
+nama = set(nama)    #konversi kembali List ke Set
+
+nama.remove("buku")
+print(nama)
+nama.discard(5)
+print(nama)
+nama.pop()
+print(nama)
+nama.clear()
+print(nama)
+
+#Menambahkan value
+nama.add ("pulpen")
+print(nama)
+nama.update (["kaca","roti"])
+print(nama)
+
+
+#DICTIONARY
+#Diimplementasikan dengan kurung kurawal { }
+#Contoh Dictionary
+saya = {'nama':'sofia','umur':'19','asal':'korea'}
+
+#Menampilkan Dict dengan Perulangan
+for i in saya.items() :
+	print(i)
+
+#Mengupdate salah satu value
+saya ['umur'] = 17
+print(saya)
+
+#Menghapus salah satu value
+saya.pop('asal')
+print(saya)
+saya.clear()   #menghapus semua nilai
+print(saya)
+
+#Menambahkan value
+saya ['hobi'] = 'makan'
+print(saya)
